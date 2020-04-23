@@ -202,21 +202,27 @@
       font-size: 150px;
     }
   }
-  .fay-profile{
-  background: url(totoro-sticker.png) 50% no-repeat;
+  #fay-profile{
+    background: url(fayprofile.jpg) 50% no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    margin: auto auto 10px;
+    border-radius: 50%;
+
+    }
+    #sarah-profile{
+    background: url(fayprofile.jpg) 50% no-repeat;
     background-size: cover;
     height: 150px;
     width: 150px;
     margin: auto auto 10px;
     border-radius: 50%;
     }
-    .sarah-profile{
-  background: url(totoro-sticker.png) 50% no-repeat;
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    margin: auto auto 10px;
-    border-radius: 50%;
+    .profile{
+      display:inline-block;
+      float: center;
+      margin:10px;
     }
   </style>
 </head>
@@ -262,10 +268,19 @@
 
       <h2 class = "text-center">About Quarantutors</h2><br>
       <h4 class = "text-center"><strong>WHO WE ARE:</strong> <br><br> A community of high school students that recognize the devastation caused by COVID-19 who are serving fellow students who may need extra academic assistance.</h4><br>
-      <h4 class = "text-center"><strong>FOUNDERS:</strong></h4>
-       <div class="fay-profile"></div> <div class="sarah-profile"></div>
+      <h4 class = "text-center"><strong>OUR FOUNDERS:</strong></h4>
+       <div class = "profile">
+         <div id="fay-profile"></div>
+            <h4><strong>Fay Lin</strong></h4>
+            <p><i class="fa fa-instagram" aria-hidden="true"></i><a href = "https://www.instagram.com/lin.fayy/">&nbsp;lin.fayy</a></p>
+        </div>
+
+        <div class = "profile">
+       <div id="sarah-profile"></div> <h4><strong>Sarah Zhao</strong></h4>
+       <p><i class="fa fa-instagram" aria-hidden="true"></i><a href = "https://www.instagram.com/zestyzh4o/">&nbsp;zestyzh4o</a></p>
+        </div>
       <br>
-      <p class = "text-center"> The idea for Quarantutors arose when we noticed that the kids who we once tutored were not going to have the resources necessary to be successful in school while in quarantine. After realizing the demand for extra homework help, we reached out to our local community and built a team. Our team of tutors is passionate, driven, and dedicated to providing valuable assistance to your child.</p>
+      <p class = "text-center"> The idea for Quarantutors arose when we noticed that the kids who we once tutored were not going to have the resources necessary to be successful in school while in quarantine.After realizing the demand for extra homework help, we reached out to our local community and built a team. Our team of tutors is passionate, driven, and dedicated to providing valuable assistance to your child.</p>
       <br><a href = "#contact"><button class = "btn btn-danger">Get in Touch</button></a>
 
  
@@ -288,7 +303,7 @@
   <h2>SERVICES</h2>
   <h4>How it works</h4>
   <br>
- <h4> At Quarantutors, we offer K-8th online homework help Monday - Friday, in 30 minute sessions. You decide the times and we will match you with one of our tutors!</h4>
+ <h4> At Quarantutors, we offer K-8th online homework help Monday - Friday in 30 minute sessions. You decide the times and we will match you with one of our tutors!</h4>
 </div>
 
 <!-- Container (Portfolio Section) -->
@@ -339,9 +354,9 @@
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><i class="fa fa-instagram" aria-hidden="true"> </i><a href = "https://www.instagram.com/quarantutors.chi/"> quarantutors.chi</a></p>
-      <p><span class="glyphicon glyphicon-envelope"></span> <a href = "mailto:quarantutors.chicago@gmail.com"> quarantutors.chicago@gmail.com</a></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> &nbsp;Chicago, US</p>
+      <p><i class="fa fa-instagram" aria-hidden="true"> </i><a href = "https://www.instagram.com/quarantutors.chi/">&nbsp;&nbsp;&nbsp;quarantutors.chi</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span> <a href = "mailto:quarantutors.chicago@gmail.com">&nbsp;quarantutors.chicago@gmail.com</a></p>
     </div>
 <div>
   <br>
@@ -412,7 +427,7 @@ $(document).ready(function(){
       var email = $("#email").val();
       var text = $("#comments").val();
             var oldUrl = $(this).attr(""); // Get current url
-            var newUrl = oldUrl.replace("mailto:"+ email +"?subject=Quarantutors Question&body=From: "+ name+ comments); // Create new url
+            var newUrl = "mailto:"+ email +"?subject=Quarantutors Question&body=From: "+ name + comments; // Create new url
             $(this).attr("href", newUrl); // Set herf value
         });
   })

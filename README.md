@@ -1,3 +1,3 @@
 # quarantutors
-## Quarantutors aims to bridge the digital divide by offering virtual homework help during the COVID-19 crisis because many students do not have the resources at home to complete homework accurately.
+#### A site for a volunteer online homework help service that seeks to provide academic assistance to younger students in the midst of the COVID-19 pandemic.
 

@@ -197,6 +197,14 @@
       text-decoration:none;
     }
   }
+  #logo{
+     background: url(logo.png) 50% no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    margin: auto auto 10px;
+    border-radius: 50%;
+  }
   @media screen and (max-width: 480px) {
     .logo {
       font-size: 150px;
@@ -209,10 +217,9 @@
     width: 150px;
     margin: auto auto 10px;
     border-radius: 50%;
-
     }
     #sarah-profile{
-    background: url() 50% no-repeat;
+    background: url(sarahprofile.jpg) 50% no-repeat;
     background-size: cover;
     height: 150px;
     width: 150px;
@@ -223,7 +230,9 @@
       display:inline-block;
       float: center;
       margin:10px;
+      width: 200px;
     }
+\
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -236,7 +245,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <a class="navbar-brand" id = "logo" href="#myPage"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -272,16 +281,19 @@
        <div class = "profile">
          <div id="fay-profile"></div>
             <h4><strong>Fay Lin</strong></h4>
+            <p>A rising senior at Lane Tech who is passionate about CS and textiles. She currently tutors at Ivy Garden Learning Center.</p>
             <p>Contact:</p>
             <p><i class="fa fa-instagram" aria-hidden="true"></i><a href = "https://www.instagram.com/lin.fayy/">&nbsp;lin.fayy</a></p>
+            <p><span class="glyphicon glyphicon-envelope"></span> <a href = "mailto:flin@cps.edu">&nbsp;flin@cps.edu</a></p>
  
         </div>
 
         <div class = "profile">
        <div id="sarah-profile"></div> <h4><strong>Sarah Zhao</strong></h4>
        <p>Contact:</p>
-       <p><i class="fa fa-instagram" aria-hidden="true"></i><a href = "https://www.instagram.com/zestyzh4o/">&nbsp;zestyzh4o</a></p>
-   
+
+       <p><span class="glyphicon glyphicon-envelope"></span> <a href = "mailto:sazhao@cps.edu">&nbsp;sazhao@cps.edu</a></p>
+   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
         </div>
       <br>
       <h4 class = "text-center"><strong>OUR STORY:</strong></h4>
@@ -310,10 +322,11 @@
   <h4> At Quarantutors, we offer K-8th online homework help Monday - Friday in 30 minute sessions. You decide the times and we will match you with one of our tutors!</h4>
 </div>
 
-<!-- Container (Portfolio Section) -->
+<!-- Container (Volunteer Section) -->
 <div id="volunteer" class="container-fluid text-center bg-grey">
   <h2>GET INVOLVED</h2>
-    <h4><strong> Join our team!</strong></h4>
+    <h4><strong> Join our team and become a volunteer!</strong></h4>
+
     <h4>We're always looking for people to support our program. Fill out an application to join!</h4>
     <a href = "https://forms.gle/5xgrH6CYkKHVQWK86"><button class = "btn btn-danger">Sign Up!</button></a>
 <!--
@@ -353,7 +366,7 @@
  -->
 </div>
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid ">
+<div id="contact" class="container-fluid">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -363,7 +376,9 @@
       <p><span class="glyphicon glyphicon-envelope"></span> <a href = "mailto:quarantutors.chicago@gmail.com">&nbsp;quarantutors.chicago@gmail.com</a></p>
     </div>
 <div>
-  <br>
+
+  <!-- Contact Feature -->
+  <!--<br>
       <div class="row">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -379,18 +394,18 @@
         </div>
       </div>
       </div>
-  </div>
+  </div>-->
 </div>
-
+  <div class = "container-fluid text-center">
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
+ 
+  <br>
+   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <br>
-  
   <p>Website by Fay Lin</p>
 </footer>
-
+  </div>
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -425,8 +440,8 @@ $(document).ready(function(){
         }
     });
   });
-      
-  $('#message').each(function(){ 
+  // Contact Feature
+ /* $('#message').each(function(){ 
     var name = $("#name").val();
       var email = $("#email").val();
       var text = $("#comments").val();
@@ -434,7 +449,7 @@ $(document).ready(function(){
             var newUrl = "mailto:"+ email +"?subject=Quarantutors Question&body=From: "+ name + comments; // Create new url
             $(this).attr("href", newUrl); // Set herf value
         });
-  })
+  }) */
 })
 </script>
 
